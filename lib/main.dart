@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_design/splash_screen.dart';
+import 'package:cinespectra_flutter_movie_ui/splash_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }

@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app_design/onbording1.dart';
+import 'package:cinespectra_flutter_movie_ui/onbording1.dart';
+
 String? name;
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -18,22 +20,24 @@ class _SplashScreenState extends State<SplashScreen> {
     });
     Timer(const Duration(seconds: 4), () {
       Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const Onbording1(),));
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Onbording1(),
+          ));
     });
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              "assets/SplashScreen/background(1).png",
-            ),
-            fit: BoxFit.cover
-          )
-        ),
+            image: DecorationImage(
+                image: AssetImage(
+                  "assets/SplashScreen/background(1).png",
+                ),
+                fit: BoxFit.cover)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -42,16 +46,10 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    "assets/SplashScreen/filmRolls.png"
-                  ),
-                  Image.asset(
-                    "assets/SplashScreen/cineSpectra.png"
-                  ),
-                  Image.asset(
-                    "assets/SplashScreen/logo.png"
-                  ),
-                ],  
+                  Image.asset("assets/SplashScreen/filmRolls.png"),
+                  Image.asset("assets/SplashScreen/cineSpectra.png"),
+                  Image.asset("assets/SplashScreen/logo.png"),
+                ],
               ),
             )
           ],
