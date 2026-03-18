@@ -32,28 +32,44 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.infinity,
+        height: double.infinity,
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(
                   "assets/SplashScreen/background(1).png",
                 ),
-                fit: BoxFit.cover)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 150),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.asset("assets/SplashScreen/filmRolls.png"),
-                  Image.asset("assets/SplashScreen/cineSpectra.png"),
-                  Image.asset("assets/SplashScreen/logo.png"),
-                ],
+                fit: BoxFit.fill)),
+        child: Center(
+            child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                child: Image.asset(
+                  "assets/SplashScreen/filmRolls.png",
+                  fit: BoxFit.contain,
+                ),
               ),
-            )
-          ],
-        ),
+              const SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                child: Image.asset(
+                  "assets/SplashScreen/cineSpectra.png",
+                  fit: BoxFit.contain,
+                ),
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                child: Image.asset(
+                  "assets/SplashScreen/logo.png",
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ],
+          ),
+        )),
       ),
     );
   }

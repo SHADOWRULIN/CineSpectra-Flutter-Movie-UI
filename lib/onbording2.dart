@@ -29,64 +29,65 @@ class _Onbording2State extends State<Onbording2> {
                 image: AssetImage(
                   "assets/Onbording2/background(3).png",
                 ),
-                fit: BoxFit.cover)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 150),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.asset("assets/Onbording2/VideoTape.png"),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Text(
+                fit: BoxFit.fill)),
+        child: Center(
+            child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset("assets/Onbording2/VideoTape.png"),
+              const SizedBox(
+                height: 20,
+              ),
+              const SizedBox(
+                width: double.infinity,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.center,
+                  child: Text(
                     "Do you have account?",
                     style: TextStyle(
                       color: Color(0xffF9F5E9),
-                      fontSize: 39,
+                      fontSize: 35,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  const SizedBox(
-                    height: 120,
-                  ),
-                  SizedBox(
-                    width: 343,
-                    height: 50,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff374951)),
-                        onPressed: switchToLoginPage,
-                        child: const Text(
-                          "Log In",
-                          style:
-                              TextStyle(color: Color(0xffF9F5E9), fontSize: 18),
-                        )),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  SizedBox(
-                    width: 343,
-                    height: 50,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff374951)),
-                        onPressed: switchToCreateAccPage,
-                        child: const Text(
-                          "Create Account",
-                          style:
-                              TextStyle(color: Color(0xffF9F5E9), fontSize: 18),
-                        )),
-                  )
-                ],
+                ),
               ),
-            )
-          ],
-        ),
+              const SizedBox(
+                height: 60,
+              ),
+              SizedBox(
+                width: 343,
+                height: 50,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff374951)),
+                    onPressed: switchToLoginPage,
+                    child: const Text(
+                      "Log In",
+                      style: TextStyle(color: Color(0xffF9F5E9), fontSize: 18),
+                    )),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                width: 343,
+                height: 50,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff374951)),
+                    onPressed: switchToCreateAccPage,
+                    child: const Text(
+                      "Create Account",
+                      style: TextStyle(color: Color(0xffF9F5E9), fontSize: 18),
+                    )),
+              )
+            ],
+          ),
+        )),
       ),
     );
   }
